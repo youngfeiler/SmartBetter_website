@@ -1,0 +1,78 @@
+{% extends "header.html" %}
+
+{% block title %}Strategy Maker{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smooth Transition Input Form</title>
+  <link rel="stylesheet" href="static/css/strategy_input.css">
+</head>
+<body>
+  <div class="container">
+    <form id="input-form">
+      
+      <div class="input-step">
+        <h1>1. Minimum +EV %</h2>
+        <p>Please pick the minimum % +EV on each bet the strategy will consider</p>
+        <p>Note: There are not many observations of bets with >20% +EV. To avoid running into errors, we suggest you pick a value somewhere between 5 and 25%</p>
+        <input type="text" id="min_ev" name="min_ev" required>
+        <button class="next-button">Next</button>
+      </div>
+
+      <div class="input-step">
+        <h1>2. Maximum Odds (avg.)</h2>
+        <p>Please enter the maximum odds of each bet you would like your strategy to place:</p>
+        <p>This is a risk tolerance option. If you don't mind betting longshots, keep this high. If you only want to place bets on more probable outcomes, keep it low.</p>
+        <input type="text" id="max_odds" name="max_odds" required>
+        <button class="next-button" value="10">Next</button>
+      </div>
+
+      <div class="input-step">
+        <h1>3. Minimum Odds (avg.)</h2>
+        <p>Please enter the minimum odds of each bet you would like your strategy to place:</p>
+        <p>This is a risk tolerance option. If you don't mind betting longshots, keep this high. If you only want to place bets on more probable outcomes, keep it low.</p>
+        <input type="text" id="min_odds" name="min_odds" required>
+        <button class="next-button" value="1">Next</button>
+      </div>
+
+      <div class="input-step">
+        <h1>4. Maximum Time Since Game Start (minutes)</h2>
+        <p>Please enter the maximum amount of minutes after the game starts you would like your strategy to stop betting</p>
+        <p>Baseball games have been averaging ~150 minutes each this year.</p>
+        <input type="text" id="max_min_com" name="max_min_com" required>
+        <button class="next-button" value="150">Next</button>
+      </div>
+
+      <div class="input-step">
+        <h1>5. Maximum Time Before Game Start (minutes)</h2>
+        <p>Please enter the maximum amount of minutes before the start of the game you would like your strategy to start betting</p>
+        <p>If you want a live (in-game) strategy, set this to 0</p>
+        <input type="text" id="min_min_com" name="min_min_com" required>
+        <button class="next-button" value="150">Next</button>
+      </div>
+
+      <div class="input-step">
+        <h1>6. Name Your Strategy</h2>
+        <p>Please a name for this strategy. No pressure.</p>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+      </div>
+
+
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="static/js/script.js"></script>
+  <script src="static/js/strategyInput.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+{% endblock %}

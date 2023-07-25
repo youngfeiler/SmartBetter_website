@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+
+{% block title %}Your Website - Profile{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="static/css/profile.css">
+    <!-- Your Profile page content goes here -->
+    <div class="container">
+        <div class="tabs-container">
+          <ul class="tabs-list" id="tabs-container">
+          </ul>
+        </div>
+      </div>
+      <h1 id="strategy-name" style="width: 100%; text-align: center;"></h1>
+      
+      <div class="container-2">
+  
+        <div class="graph-container">
+            <div class="graph-div" id="graph"></div>
+        </div>
+        <div class="info-container">
+            <div class="graph-info-div" id="overall-info-box">
+              <div class="tab" id="graph-info-tab">Graph Information</div>
+              <div class="tab" id="day-info-tab">Individual Day Information</div>
+              <ul class="info-list" id="info-list">
+                <li><strong>Total P/L:</strong> <span id="total-pl"></span></li>
+                <li><strong>Worst Day:</strong> <span id="worst-day"></span></li>
+                <li><strong>Best Day:</strong> <span id="best-day"></span></li>
+                <li><strong>Win Rate:</strong> <span id="precision"></span></li>
+                <li><strong>Total Bets Placed:</strong> <span id="total-bets-placed"></span></li>
+              </ul>
+              <ul id="day-info-list" style="display: none;" class="info-list">
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    <div id="info-box" style="width: 100%; height: 400px; text-align: center;"></div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/js/graphDisplayer.js"></script>
+    <script src="static/js/strategyScroll.js"></script>
+{% endblock %}

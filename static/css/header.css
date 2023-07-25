@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Reset anchor link styles */
+a.logo {
+  color: inherit; /* Use the default text color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Style for the logo (optional, you can adjust it as needed) */
+a.logo {
+  font-size: 24px;
+  font-weight: bold;
+  /* Add other styles as needed */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling when tabs overflow */
+  white-space: nowrap; /* Prevent tabs from wrapping to the next line */
+}
+
+nav ul li {
+  padding: 5px 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
