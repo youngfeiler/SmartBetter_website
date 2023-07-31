@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>{% block title %}Your Website{% endblock %}</title> -->
+  <link rel="stylesheet" href="static/css/header.css">
+
+</head>
+<body>
+  <header>
+    <a href="/home" class="logo">SmartBetter</a>
+    <nav>
+      <ul>
+        <li><a href="/make_strategy">Make Strategy</a></li>
+        <li><a href="/information">Information</a></li>
+        <li><a href="/profile">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

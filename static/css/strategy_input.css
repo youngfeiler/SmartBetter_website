@@ -1,0 +1,146 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #14222d;
+  color: #fefefe;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  margin-top: 50px;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+
+.input-step {
+  font-family:sans-serif;
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.input-step.visible {
+  display: block;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 600px;
+}
+
+p {
+  font-size: 16px;
+  color: #fefefe;
+  text-wrap: balance;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #253c4d;
+  background-color: #16242f;
+  color: #fefefe;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#input::placeholder {
+  color: #999;
+}
+
+input[type="number"] {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #16242f;
+  border: 1px solid #253c4d;
+}
+
+/* Styling for Chrome, Safari, and Edge (WebKit) spinner controls */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/* Styling for Firefox spinner controls */
+input[type="number"]::-moz-range-thumb {
+  /* Customize the spinner controls */
+  appearance: none;
+}
+
+button:hover{
+  background-color: #327ba3;
+  border: 2px solid #16242f;
+}
+
+button {
+  border: 2px solid #16242f;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #16242f;
+  background-color: #5ebde4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.transitioning {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.transitioning.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.input-step h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.input-step p {
+  font-size: 16px;
+  color: #fefefe;
+  font-weight: lighter;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #327ba3;
+}
+
+.after-color{
+  color: #5ebde4;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bettable-books {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the selected sportsbook buttons */
+.bettable-books.selected {
+  background-color: #007bff;
+  color: #fff;
+}

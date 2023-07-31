@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #142330;
+  color: #fefefe;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #253c4d;
+  background-color: #16242f;
+  border-radius: 20px;
+  margin-top: 40px;
+
+}
+
+ #test {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #eceef0; 
+
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f2f2f2;
+  margin-bottom: 20px; /* Add a margin at the bottom to separate from the paragraph */
+}
+
+header p {
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.submit-button {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  margin-right:20px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="tel"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px;
+  background-color: #16242f;
+  border: 1px solid #253c4d;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  color: #fefefe;
+}
+
+
+.input-group input[type="text"]:focus,
+.input-group input[type="tel"]:focus,
+.input-group input[type="password"]:focus {
+  outline: none;
+  border: 1px solid #327ba3;
+  background-color: #16242f;
+
+
+}
+
+.submit-button {
+  margin-top: 30px;
+  background-color: #5ebde4;
+  color: #16242f;
+  transition: box-shadow 0.3s ease;
+  border: 2px solid #16242f
+
+}
+
+.submit-button:hover {
+  background-color: #327ba3;
+  border: 2px solid #16242f
+}
+
+.error-label {
+  color: #ff4c4c; /* Set the text color to red */
+  margin-bottom: 5px; /* Add 5px spacing between the error message and the input box below */
+}

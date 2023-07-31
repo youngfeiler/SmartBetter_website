@@ -1,0 +1,89 @@
+{% extends "header.html" %}
+
+{% block title %}Your Website - Profile{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="static/css/profile.css">
+        <div class="tabs-container">
+          <ul class="tabs-list" id="tabs-container"></ul>
+        </div>
+
+    <div class="strat-name-container">
+      <h1 id="strategy-name" style="width: 100%; text-align: center;"></h1>
+    </div>
+
+      <div class="container-2">
+
+        <div class="graph-container">
+            <div class="graph-div" id="graph"></div>
+        </div>
+        <div class="info-container">
+            <div class="graph-info-div" id="overall-info-box">
+              <div class="tab info" id="graph-info-tab">Graph Information</div>
+              <div class="tab info" id="day-info-tab">Individual Day Information</div>
+              <ul class="info-list" id="info-list">
+                <li><strong>Total P/L:</strong> <span id="total-pl"></span></li>
+                <li><strong>Worst Day:</strong> <span id="worst-day"></span></li>
+                <li><strong>Best Day:</strong> <span id="best-day"></span></li>
+                <li><strong>Win Rate:</strong> <span id="precision"></span></li>
+                <li><strong>Total Bets Placed:</strong> <span id="total-bets-placed"></span></li>
+                <li><strong>Return on Money:</strong> <span id="return-on-money"></span></li>
+              </ul>
+              <ul id="day-info-list" style="display: none;" class="info-list">
+              </ul>
+              <div class="text-me-div">
+  <input type="checkbox" id="textMeCheckbox" method="post">
+  <label for="textMeCheckbox">Text me about this strategy</label>
+</div>
+            </div>
+            
+          </div>
+          
+        </div>
+          <div class="plot-container" id="bottom-container">
+        <li id="active-bets-view" class="tab view" >Active Bets</li>
+        <li id="teams-view" class="tab view">Teams View</li>
+        <li id="book-view" class="tab view">Sportsbooks View</li>
+          <div class="table-container" id="active-bets-table-container">
+            <table class="table" id="active-bets-table">
+              
+              <thead> 
+                <h3>Active Bets</h3>
+                  <p>Wagers your model found that have not yet settled</p>
+                <tr>
+                  <th>Event Date</th>
+                  <th>EV</th>
+                  <th>Event</th>
+                  <th>Market</th>
+                  <th>Best Odds</th>
+                  <th>SportsBook</th>
+                  
+                </tr>
+              </thead>
+              <tbody id="active-bets-table-body">
+                <!-- Table rows will be added here dynamically -->
+              </tbody>
+            </table>
+          </div>
+          </div>
+
+        
+        
+
+
+    <!-- Container for the Plotly graph -->
+    <div id="plotContainer"></div>
+
+    <div id="info-box" style="width: 100%; height: 400px; text-align: center;"></div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/js/graphDisplayer.js"></script>
+    <script src="static/js/strategyScroll.js"></script>
+    <script src="static/js/teamDistribution.js"></script>
+    <script src="static/js/strategyTabsDisplay.js"></script>
+    <script src="static/js/sportsbookDistribution.js"></script>
+    <script src="static/js/activeBets.js"></script>
+    <script src="static/js/textInfoUpdater.js"></script>
+
+{% endblock %}

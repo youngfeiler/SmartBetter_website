@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+
+{% block title %}SmartBetter Login / Register{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="static/css/login.css">
+<div class="container">
+  <div class="test">
+    <h1>Sign Up / Log In</h1>
+    <p>Please enter your details below to register.</p>
+  </div>
+
+  <form id="registration-form" method="POST" action="/login">
+    <div class="input-group">
+      <input type="text" id="username" name="username" placeholder="Please Enter Your Username" value="{{ request.form.get('username', '') }}"required>
+    </div>
+
+    <div class="input-group">
+      {% if incorrect_password %}
+    <div class="error-label">Wrong password, please try again</div>
+      {% endif %}
+      <input type="password" id="password" name="password" placeholder="Please Enter Your Password" required>
+    </div>
+    <button type="submit" class="submit-button">Sign In</button>
+  </form>
+</div>
+</form>
+
+{% endblock %}
+

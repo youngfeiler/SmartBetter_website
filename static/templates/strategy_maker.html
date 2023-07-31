@@ -1,0 +1,155 @@
+{% extends "header.html" %}
+
+{% block title %}Strategy Maker{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartBetter - Strategy Maker</title>
+  <link rel="stylesheet" href="static/css/strategy_input.css">
+</head>
+<body>
+  <div class="container">
+    <form id="input-form">
+
+      <div class="input-step">
+        <h1>Let's Build a Custom Betting Strategy.</h1>
+        <p>We'll walk you through creating your first strategy. </p>
+        <p>Then the model will run - it might take a few minutes lol.</p>
+        <p> In your dashboard, you can analyze the optimized strategy's past performance and statistics.</p>
+        <p>Active bets that align with your chosen strategy will populate in your profile. Toggle between strategies anytime to view relevant picks.</p>
+        <p>Active bets that align with your chosen strategy will populate in your profile. Toggle between strategies anytime to view relevant picks.</p>
+        <p>With data-driven guidance, personalized strategies, and automated recommendations, <b>SmartBetter has you covered.</b></p>
+        <button class="next-button">Ready? Let's go!</button>
+      </div>
+
+      <div class="input-step" id="step-1">
+        <h1>Set Your Maximum Odds</h1>
+        <p>This input will allow you to define the <b>highest odds </b>you're comfortable betting.</p>
+        <p>For example, entering <b>+220 </b>means you will only receive picks at <b>+220 </b>or lower: </p>
+        <p>A bet priced at <b>-200 </b>would be shown, but +300 would not.</p>
+        <button class="next-button" data-next="step-2">Got it, I'm ready</button>
+      </div>
+      
+      <div class="input-step" id="step-2">
+        <h1>Set Your Maximum Odds</h1>
+        <p>This input will allow you to define the <b>highest odds </b>you're comfortable betting.</p>
+        <p>For example, entering <b>+220 </b>means you will only receive picks at <b>+220 </b>or lower: </p>
+        <p>A bet priced at <b>-200 </b>would be shown, but +300 would not.</p>
+        <h2>Set your maximum Odds</h2>
+        <input type="text" id="max_odds" name="max_odds" type="number" required>
+        <button data-next="step-3" class="next-button">Next</button>
+      </div>
+
+      <div class="input-step" id="step-3">
+        <h1>Set Your Minimum Odds</h1>
+        <p>This setting will allow you to define the <b>lowest odds </b>you're comfortable betting.</p>
+        <p>For example, entering <b>-400 </b>means you will only receive picks at <b>-400 or higher.</b></p>
+        <p>A bet priced at <b>-300 </b>would be shown, but <b>-500 would not. </b></p>
+        <button class="next-button" data-next="step-4">Got it, I'm ready</button>
+      </div>
+      
+      <div class="input-step" id="step-4">
+        <h1>Set Your Minimum Odds</h1>
+        <p>This setting will allow you to define the <b>lowest odds </b>you're comfortable betting.</p>
+        <p>For example, entering <b>-400 </b>means you will only receive picks at <b>-400 or higher.</b></p>
+        <p>A bet priced at <b>-300 </b>would be shown, but <b>-500 would not. </b></p>
+        <h2>Set your minimum odds</h2>
+        <input type="text" id="min_odds" name="min_odds" type="number" required>
+        <button data-next="step-5" class="next-button">Next</button>
+      </div>
+
+
+
+      <div class="input-step" id="step-5">
+        <h1>Live Betting</h1>
+        <p>This setting determines how <b>long (in minutes) after a game starts </b>that  your model will stop recommending bets. It lets you customize for pre-game or live betting.</p>
+        <p>For example, setting this feature to 0 means that you'll only get bets <b>before the game starts. </b></p>
+        <p>Setting this feature to 150 will provide picks <b>throughout the entire game. </b>MLB games are averaging 150 minutes this season, so this value enables your model to recommend live-bets throughout the full duration of a game.</p>
+        <button class="next-button" data-next="step-6">Got it, I'm ready</button>
+      </div>
+      
+      <div class="input-step" id="step-6">
+        <h1>Live Betting</h1>
+        <p>This setting determines how <b>long (in minutes) after a game starts </b>that  your model will stop recommending bets. It lets you customize for pre-game or live betting.</p>
+        <p>For example, setting this feature to 0 means that you'll only get bets <b>before the game starts. </b></p>
+        <p>Setting this feature to 150 will provide picks <b>throughout the entire game. </b>MLB games are averaging 150 minutes this season, so this value enables your model to recommend live-bets throughout the full duration of a game.</p>
+        <h2>Set your maximum time <span class="after-color">after</span> game start</h2>
+
+        <input type="text" id="max_min_com" name="max_min_com" type="number" required pattern="\d*">
+        <button data-next="#step-7" class="next-button">Next</button>
+      </div>
+
+      <div class="input-step" id="step-7">
+        <h1>Customize Timing With Max Time Before Game Start</h1>
+        <p>This setting lets you control how far in advance you and your model can bet before the game starts.</p>
+        <p>Choosing “-240” represents 240 minutes - or 4 hours - before the game starts to start placing bets. Choosing "0" represents only live, in-game bets. </p>
+        <p>Value must be <b>negative </b>(i.e: -240)</p>
+
+        <button class="next-button" data-next="step-8">Got it, I'm ready</button>
+      </div>
+      
+      <div class="input-step" id="step-8">
+        <h1>Customize Timing With Max Time Before Game Start</h1>
+        <p>This setting lets you control how far in advance you and your model can bet before the game starts.</p>
+        <p>Choosing “-240” represents 240 minutes - or 4 hours - before the game starts to start placing bets. Choosing "0" represents only live, in-game bets. </p>
+        <p>Value must be <b>negative </b>(i.e: -240)</p>
+
+        <h2>Set your maximum time <span class="after-color">before</span> game start</h2>
+        <input type="text" id="min_min_com" name="min_min_com" type="number" required>
+        <button data-next="#step-9" class="next-button">Next</button>
+      </div>
+
+      <div class="input-step" id="step-9">
+        <h1>Select Your Sportsbooks</h1>
+        <p>Which SportsBooks do you use?</p>
+        <p>This setting is important because it customizes <b>your AI model </b>to search for bets when they appear on <b>your sportsbooks</b>, and will calculate historical performance accordingly.</p>
+        <input type="hidden" name="bettable_books" id="bettable_books">
+
+        <div class="checkbox-container">
+          <button type="button" class="bettable-books" value="barstool">Barstool Sportsbook</button>
+          <button type="button" class="bettable-books" value="betfred">BetFred</button>
+          <button type="button" class="bettable-books" value="betmgm">BetMGM</button>
+          <button type="button" class="bettable-books" value="betonlineag">BetOnlineAg</button>
+          <button type="button" class="bettable-books" value="betrivers">BetRivers</button>
+          <button type="button" class="bettable-books" value="betway">BetWay</button>
+          <button type="button" class="bettable-books" value="bovada">Bovada</button>
+          <button type="button" class="bettable-books" value="circasports">CircaSports</button>
+          <button type="button" class="bettable-books" value="draftkings">DraftKings</button>
+          <button type="button" class="bettable-books" value="fanduel">FanDuel</button>
+          <button type="button" class="bettable-books" value="foxbet">FoxBet</button>
+          <button type="button" class="bettable-books" value="pointsbetus">PointsBet</button>
+          <button type="button" class="bettable-books" value="superbook">SuperBook</button>
+          <button type="button" class="bettable-books" value="twinspires">TwinSpires</button>
+          <button type="button" class="bettable-books" value="williamhill">WilliamHill</button>
+          <button type="button" class="bettable-books" value="wynnbet">WynnBet</button>
+        </div>
+        <button data-next="#step-10" class="next-button">Next</a>
+
+      </div>
+
+
+      <div class="input-step" id="step-10">
+        <h1>Give your strategy a name.</h1>
+        <p>No pressure.</p>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+        <div id="error-message" style="display: none;">
+          <p>Strategy name already exists. Please try again with a different name.</p>
+        </div>
+      </div>
+
+      
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="static/js/script.js"></script>
+  <script src="static/js/strategyInput.js"></script>
+
+</body>
+</html>
+
+
+
+
+{% endblock %}

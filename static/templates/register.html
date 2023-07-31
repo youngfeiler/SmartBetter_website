@@ -1,0 +1,47 @@
+{% extends "header.html" %}
+
+{% block title %}SmartBetter Home{% endblock %}
+
+{% block content %}
+
+
+<title>SmartBetter - Registration</title>
+<link rel="stylesheet" href="static/css/register.css">
+<div class="container">
+  <div class="test">
+    <h1>User Registration</h1>
+    <p>Please enter your details below to register.</p>
+  </div>
+
+  <form id="registration-form" method="POST" action="/register">
+    <div class="input-group">
+      <input type="text" id="first-name" name="first_name" placeholder="Please Enter Your First Name" value="{{ form_data.get('first_name', '') }}"required>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="last-name" name="last_name" placeholder="Please Enter Your Last Name" value="{{ form_data.get('last_name', '') }}"required>
+    </div>
+
+    <div class="input-group">
+      {% if username_exists %}
+    <div class="error-label">Username already exists, please try again</div>
+  {% endif %}
+
+      <input type="text" id="username" name="username" placeholder="Please Enter Your New Username" required>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" name="password" placeholder="Please Enter Your New Password" value="{{ form_data['password'] }}"required>
+    </div>
+
+    <div class="input-group">
+      <input type="tel" id="phone_number" name="phone_number" placeholder="Please Enter Your Phone Number (no special characters)" required value="{{ form_data.get('phone_number', '') }}">
+    </div>
+
+    <button type="submit" class="submit-button">Register</button>
+  </form>
+</div>
+</form>
+
+{% endblock %}
+

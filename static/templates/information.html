@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+
+{% block title %}SmartBetter Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="static/css/home.css">
+<div class="container">
+  <section class="intro-section">
+    <h1>SmartBetter Explanation</h1>
+  </section>
+
+  <section class="features-section">
+    <h2>Model Information</h2>
+    <div class="feature">
+      <h3>Historical MLB Dataset</h3>
+      <p>Each model is trained on 3 past seasons of MLB data. The data consists primaily of moneyline, head-to-head pricing in the MLB market. It trains to identify high-quality price discrepancies -- differences between what the market thinks an outcome should be priced and the price at which your sportsbook is offering that outcome. </p>
+
+       
+      <p>The dataset is first filtered for +EV bets. These by themselves are profitable in the long run -- it's like getting 3:1 on 'red' at the roulette table when the probability is just around 50%.
+
+      The difference between SmartBetter and +EV betting sites is that our model trains to boost it's hit rate on +EV bets. Every time you win a +EV bet, you gain a winner and remove a loser, increasing money on money return dramatically. </p>
+      <h3>Example</h3>
+      <p>
+     Lets look at an example: 
+      The LA Dodgers are one of the biggest market teams in the MLB. This implies that they have more fans to bet on their games. Therefore, to keep their books balanced, DraftKings might artificially increase the odds for their opponent. This reduces exposure. Our models identify this pattern and tend to bet more frequently on small-market teams when they play large-market teams because they will frequently be underpriced. 
+      </p>
+    </div>
+    <div class="feature">
+      <h3>More soon...</h3>
+      
+  </section>
+    <h2>Start Winning with SmartBetter</h2>
+    <p>Thank you for beta testing SmartBetter! Take some time to set your preferences, create strategies, paper trade or place a few wagers. We want your honest feedback on the user experience and potential site improvements. The more you engage with the tool, the more we can improve it.
+
+    </p>
+  </section>
+</div>
+
+{% include "footer.html"  %}
+</body>
+
+</html>
+{% endblock %}
+
