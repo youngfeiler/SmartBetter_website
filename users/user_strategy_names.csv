@@ -1,0 +1,23 @@
+username,strategy_name,text_alerts
+Chris,SmartBetter low risk demo strategy,False
+youngfeiler,SmartBetter low risk demo strategy,True
+oldfeiler,SmartBetter low risk demo strategy,False
+mbla,SmartBetter low risk demo strategy,False
+youngfeiler,BS DK FD,False
+youngfeiler,2hr before,True
+test_beta,SmartBetter low risk demo strategy,False
+beta_test,SmartBetter low risk demo strategy,False
+adamsessions1,SmartBetter low risk demo strategy,False
+Nbeech37,SmartBetter low risk demo strategy,False
+nbeech37,SmartBetter low risk demo strategy,True
+Oldfeiler,SmartBetter low risk demo strategy,False
+Oldfeiler,beta_test_5,False
+Oldfeiler,beta_test_6,False
+nbeech37,McBoogerballs Strategy,False
+Oldfeiler,beta_test_7,False
+Christian1,SmartBetter low risk demo strategy,False
+youngfeiler,All books high risk live youngfeiler,False
+youngfeiler,New val data test,False
+youngfeiler,Another test,False
+youngfeiler,strategy_new_val_test,False
+youngfeiler,test_shuffle_on,True
