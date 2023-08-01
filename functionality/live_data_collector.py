@@ -116,7 +116,7 @@ class data_collector():
 
         # Replace some bad values same as we did in the creation of the model
         self.replace_bad_vals_for_split()
-        print(f'Length after replace bad vals: {len(self.df)}')
+        #print(f'Length after replace bad vals: {len(self.df)}')
         
         #  DON'T TOUCH. ORDER IS VERY IMPORTANT
         column_order = ['barstool_1_odds', 'betclic_1_odds',  
