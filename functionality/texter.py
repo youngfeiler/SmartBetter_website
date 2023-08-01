@@ -5,7 +5,7 @@ import pandas as pd
 class texter():
     def __init__ (self, strat_list):
         self.account_sid = 'AC8c14921fcae1fead46c9a56bbd46d606'
-        self.auth_token = 'xxxxxxxxxxx'
+        self.auth_token = 'xxx'
         self.twilio_phone_number = '+18573922435'
         self.client = Client(self.account_sid, self.auth_token)
  
